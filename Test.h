@@ -11,6 +11,8 @@ class Test {
 	public:
 	Test() :data{0}{std::cout << "Test constructor(" << data << ")" << std::endl;}
 	Test(const int new_data) :data{new_data}{std::cout << "Test constructor(" << data << ")";}
+	int get_data() {return data;}
+	~Test() {std::cout << "Test destructor(" << data << ")";}
 };
 
 #endif
