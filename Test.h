@@ -2,6 +2,7 @@
 #define TEST_H_
 
 #include <iostream>
+#include <memory>
 
 class Test {
 
