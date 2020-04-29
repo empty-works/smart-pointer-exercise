@@ -3,7 +3,7 @@
 #include <memory>
 #include "Test.h"
 
-std::unique_ptr make();
+std::unique_ptr<std::vector<std::shared_ptr<Test>>> make();
 void fill(std::vector<std::shared_ptr<Test>>, int);
 void display(std::vector<std::shared_ptr<Test>>);
 
@@ -17,4 +17,11 @@ int main() {
 	fill(*vec_ptr, num);
 	display(*vec_ptr);	
 	return 0;
+}
+
+std::unique_ptr<std::vector<std::shared_ptr<Test>>> make() {
+
+	std::unique_ptr<std::vector<std::shared_ptr<Test>>> vec_ptr = std::make_unique<std::vector<std::shared_ptr<Test>>>();
+	
+	return vec_ptr;	
 }
