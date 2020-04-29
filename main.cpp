@@ -25,3 +25,8 @@ std::unique_ptr<std::vector<std::shared_ptr<Test>>> make() {
 	
 	return vec_ptr;	
 }
+
+void fill(std::vector<std::shared_ptr<Test>>, int) {
+
+
+}

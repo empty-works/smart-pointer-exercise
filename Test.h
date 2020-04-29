@@ -6,6 +6,8 @@
 
 class Test {
 
+	friend std::ostream &operator<<(std::ostream &os, const Test &obj);
+
 	private:
 	int data;
 
