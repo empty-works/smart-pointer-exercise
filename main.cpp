@@ -11,7 +11,7 @@ int main() {
 
 	std::unique_ptr<std::vector<std::shared_ptr<Test>>> vec_ptr;
 	vec_ptr = make();
-	std::cout << "How many data points do you want to enter:";
+	std::cout << "How many data points do you want to enter: ";
 	int num;
 	std::cin >> num;
 	fill(*vec_ptr, num);
@@ -30,7 +30,7 @@ void fill(std::vector<std::shared_ptr<Test>> &test_vec , size_t num_data) {
 
 	for(size_t i{0}; i < num_data; i++) {
 	
-		std::cout << "Enter data point [" << i << "] : ";
+		std::cout << "Enter data point [" << i + 1 << "] : ";
 		int num;
 		std::cin >> num;
 		std::shared_ptr<Test> new_test = std::make_shared<Test>(num);
