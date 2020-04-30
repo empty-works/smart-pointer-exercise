@@ -40,11 +40,12 @@ void fill(std::vector<std::shared_ptr<Test>> &test_vec , size_t num_data) {
 
 void display(const std::vector<std::shared_ptr<Test>> ptr_vec) {
 
+	std::cout << std::endl;
 	std::cout << "Displaying vector data" << std::endl;
 	std::cout << "========================================" << std::endl;
 	for(auto &test : ptr_vec) {
 	
-		std::cout << test << std::endl;
+		std::cout << test->get_data() << std::endl;
 	}
 	std::cout << "========================================" << std::endl;
 }
