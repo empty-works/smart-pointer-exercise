@@ -4,7 +4,7 @@
 #include "Test.h"
 
 std::unique_ptr<std::vector<std::shared_ptr<Test>>> make();
-void fill(std::vector<std::shared_ptr<Test>>, size_t);
+void fill(std::vector<std::shared_ptr<Test>> &, size_t);
 void display(const std::vector<std::shared_ptr<Test>>);
 
 int main() {
@@ -26,7 +26,7 @@ std::unique_ptr<std::vector<std::shared_ptr<Test>>> make() {
 	return vec_ptr;	
 }
 
-void fill(std::vector<std::shared_ptr<Test>> test_vec , size_t num_data) {
+void fill(std::vector<std::shared_ptr<Test>> &test_vec , size_t num_data) {
 
 	for(size_t i{0}; i < num_data; i++) {
 	
@@ -34,6 +34,7 @@ void fill(std::vector<std::shared_ptr<Test>> test_vec , size_t num_data) {
 		int num;
 		std::cin >> num;
 		std::shared_ptr<Test> new_test = std::make_shared<Test>(num);
+		test_vec.push_back(new_test);
 	}
 }
 
