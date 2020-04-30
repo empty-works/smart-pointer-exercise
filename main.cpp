@@ -5,7 +5,7 @@
 
 std::unique_ptr<std::vector<std::shared_ptr<Test>>> make();
 void fill(std::vector<std::shared_ptr<Test>>, size_t);
-void display(std::vector<std::shared_ptr<Test>>);
+void display(const std::vector<std::shared_ptr<Test>>);
 
 int main() {
 
@@ -37,7 +37,13 @@ void fill(std::vector<std::shared_ptr<Test>> test_vec , size_t num_data) {
 	}
 }
 
-void display(std::vector<std::shared_ptr<Test>>) {
+void display(const std::vector<std::shared_ptr<Test>> ptr_vec) {
 
-
+	std::cout << "Displaying vector data" << std::endl;
+	std::cout << "========================================" << std::endl;
+	for(auto &test : ptr_vec) {
+	
+		std::cout << test << std::endl;
+	}
+	std::cout << "========================================" << std::endl;
 }
